@@ -1,0 +1,31 @@
+1)
+    Min, Max and Average are reductions. 
+    
+    
+2)
+    There are N * log(BlockSize) floating point operations are performed in the kernel, where N is the length of the input. 
+    
+3)
+    2*N global memory reads occur during the total running of the kernel. 
+    
+4)
+    1 global write is made per BLOCK_SIZE number of elements. 
+ 
+5) 
+    a) The minimum possible is 1 
+    b) the maximum is 2n+ log(blocksize)
+    c) the average is log(blocksize)
+    
+6)
+    A single thread block synchronizes each thread once before entering a loop, then again for each iteration of the loop.
+    So the result will be once per block, then log blocksize per block. so log(blocksize)
+    
+7) 
+    You would need to recursively call the kernel, which would essentially chunk the kernel calls into the maximum number of threads
+    per call. 
+    
+8) 
+    The value of 5000000 is not evenly divisible by the maximum blocksize that cuda supports. Because of this, unless kernel was recursively called
+    the value will always be extremely close, but not correct. 
+    
+    

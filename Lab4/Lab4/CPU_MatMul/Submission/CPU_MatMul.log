@@ -1,0 +1,17 @@
+﻿Build started 10/10/2016 10:28:32 PM.
+     1>Project "C:\Users\Charles\Desktop\Botany380\Lab4\Lab4\CPU_MatMul\CPU_MatMul.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         D:\Apps\VisualStudio2013\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Charles\Desktop\Botany380\Lab4\Lab4\Submission\CPU_MatMul.exe" /NOLOGO /LIBPATH:C:\Users\Charles\Desktop\Botany380\Lab4\Lab4\\libwb\lib\MinSizeRel wb.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Charles\Desktop\Botany380\Lab4\Lab4\Submission\CPU_MatMul.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Charles\Desktop\Botany380\Lab4\Lab4\Submission\CPU_MatMul.lib" /MACHINE:X64 Submission\main.obj
+         Generating code
+         Finished generating code
+         CPU_MatMul.vcxproj -> C:\Users\Charles\Desktop\Botany380\Lab4\Lab4\Submission\CPU_MatMul.exe
+       PostBuildEvent:
+         copy C:\Users\Charles\Desktop\Botany380\Lab4\Lab4\CPU_MatMul\main.cpp C:\Users\Charles\Desktop\Botany380\Lab4\Lab4\Submission\CPU_MatMul.cpp
+         DEL C:\Users\Charles\Desktop\Botany380\Lab4\Lab4\Submission\*.pdb
+         :VCEnd
+                 1 file(s) copied.
+     1>Done Building Project "C:\Users\Charles\Desktop\Botany380\Lab4\Lab4\CPU_MatMul\CPU_MatMul.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.79

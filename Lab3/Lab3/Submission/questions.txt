@@ -1,0 +1,13 @@
+1) BinarySearch is called one time for each element of each input array. The
+algorithm runs concurrently on all of the items in the array at once, so it 
+finds the position of each value concurrently. 
+2) No, BinarySearch only works on sorted arrays, as one of the assumptions 
+that is made is that you can assume that is A[J] is less than A[M], then all items
+> A[M] are >A[J]
+3) The best runtime of the merge algorthm run on the CPU is n*log(n), where 
+N = length of the list. This is because the CPU can not (assuming not using threads)
+run each search concurrently, so each element in A needs to be checked with a log(n) binary
+search function.
+4) Mergesort
+5) Yes, Currently elements from A are inserted first, and elements from B are inserted after
+checking for alignment errors. In order to correct for this, you would have to check each list dynamically.

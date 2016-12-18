@@ -1,0 +1,31 @@
+﻿Build started 10/10/2016 10:51:19 PM.
+     1>Project "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Lab3\Lab3.vcxproj" on node 2 (Build target(s)).
+     1>AddCudaCompileDeps:
+         D:\Apps\VisualStudio2013\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DLAB_DEBUG /DWIN32 /DWIN64 /D_DEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I. /FIcuda_runtime.h /c C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Lab3\kernel.cu 
+       CudaBuild:
+         Compiling CUDA source file kernel.cu...
+         cmd.exe /C "C:\Users\Charles\AppData\Local\Temp\tmp41c72ce49b4544c7a59335a6e10864f1.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "D:\Apps\VisualStudio2013\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DLAB_DEBUG -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o Debug\kernel.cu.obj "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Lab3\kernel.cu"
+         
+         C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Lab3>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "D:\Apps\VisualStudio2013\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DLAB_DEBUG -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o Debug\kernel.cu.obj "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Lab3\kernel.cu" 
+         kernel.cu
+       Link:
+         D:\Apps\VisualStudio2013\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Debug\Lab3.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\x64" wb.lib cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Debug\Lab3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Debug\Lab3.lib" /MACHINE:X64 Debug\kernel.cu.obj
+         Lab3.vcxproj -> C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Debug\Lab3.exe
+       PostBuildEvent:
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64*.dll" "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Debug\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64*.dll" "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Debug\"
+         
+         echo copy "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Lab3\\kernel.cu" "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Debug\"
+         copy "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Lab3\\kernel.cu" "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Debug\"
+         :VCEnd
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64*.dll" "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Debug\"
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64_75.dll
+                 1 file(s) copied.
+         copy "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Lab3\\kernel.cu" "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Debug\"
+                 1 file(s) copied.
+     1>Done Building Project "C:\Users\Charles\Desktop\Botany380\Lab3\Lab3\Lab3\Lab3.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.15

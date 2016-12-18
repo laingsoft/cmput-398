@@ -1,0 +1,92 @@
+PART 1:
+	Question 1: 
+		Attempting to initialize a pointer with an integer value is not permitted. Pointers must be initialized with a memory address to point to. So change line 1 to:
+		
+		int b = 3;
+		int *a = &b;
+		
+
+	Question 2:
+		Initializing an integer when the intention is to init a pointer. change line 1 to : 
+
+		int *a, *b;
+	
+	Question 3:
+		malloc allocated the amount of BYTES, not the amount of objects in memory, so change line 1 to 
+		
+		int i, *a = (int*)malloc(1000*sizeof(int));
+
+	Question 4:
+		This does not allocate memory within the rows of the array. In order to do this, you would be required to loop through the array and do a seperate malloc for each element in the array:
+		
+		int a** = (int **) malloc(3*sizeof(int*));
+		for (i =0, i>100, i++){
+		
+			a[i] = malloc(sizeof(int));
+		}
+		a[1][1] = 5;
+
+	Question 5:
+		
+		simply forgetting to dereference the pointer on line 4:
+
+		int *a = (int*)malloc(sizeof(int));
+		scanf("%d", a);
+		if(! *a){
+			printf("The value is 0 \n"
+		}
+		
+
+PART 2:
+	
+	y_1[n] = x[n-1] + x[n] + x[n+1] Will run faster on the GPU, because of data parallelization. This code snippet moves data from one in structure to an out structure. This saves on reading and loading operations that are required in the second snippet. In other words, because the data is being written from one memory address to another, rather than back onto itself, the operation can be completed more efficiently.
+		
+
+
+
+
+
+PART 4:
+Question 1: What is the device name (GPU)?
+	Geforce GTX 750 Ti
+
+Question 2: Suppose you are launching a one-dimensional grid and block. If the hardware's maximum grid dimension is 65535 and the maximum block dimension is 512, what is the maximum number threads can be launched on the GPU?
+	The maximum number of threads that can be launched in this case is (65535^3)*512.
+
+Question 3: Under what conditions might a programmer choose not want to launch the maximum number of threads?
+	In cases where only a smaller number of threads is required, there is no point in launching the maximum number of threads. It would also be possible to round up or down the number of
+threads to a multiple of the warp size to gain a performance advantage, or simply launching too many threads has an inherent time and resource cost which may not be ideal. 
+
+Question 4: What can limit a program from launching the maximum number of threads on a GPU?
+	Thread resource limitation can force a program to not be able to utilize the theoretical maximum amount of threads, because there simply will not be enough memory available to run much of a computation on each thread.
+	
+Question 5: What is the maximum global memory size?
+	2147483648
+
+Question 6: What is global memory?
+	Global memory is the DRAM that is present on the device. It is used for the computations that are done on the gpu itself, therefore data must be transferred from the host memory to the
+global memory before it can be operated on. 
+
+Question 7: What is the maximum constant memory size?
+	65536
+
+Question 8: What is constant memory?
+	Constant memory is memory that can only be accessed in a read only manner. It is used for data that will not change over the course of running a kernel.	
+
+Question 9: What is the maximum shared memory size?
+	49152
+
+Question 10: What is shared memory?
+	Shared memory is a type of memory that is physically on the GPU, it is mainly used to communicate data between blocks. 
+
+Question 11: What is the maximum block dimensions?
+	1024 x 1024 x 64
+
+Question 12: What is the maximum grid dimensions?
+	2147483647
+
+Question 13: What is the warp size?
+	32
+
+Question 14: What does warp size signify on a GPU?
+	Warp size is the number of threads in a warp, which is a hardware level division of a block. 32 being the number of threads that can be executed concurrently in a warp.

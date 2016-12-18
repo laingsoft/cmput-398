@@ -1,0 +1,12 @@
+1)
+	There is one floating point operation per item in each array. So for an array of size 16, there are 16 floating point operations
+2)
+	There are three global memory reads. One for out, and one for each in1 and in2. 
+3)
+	In the kernel, there is one global memory write per instance of the kernel. 
+4)
+	There are 2*inputlength*sizeof(float) bytes copied to the device, because you are required to upload the two input arrays. 
+	The third, output array is simply allocated, and not transferred to the device. 
+5)
+	Only inputlength*sizeof(float) is transferred from the device to host. This is because there is no operations taking place 
+	on the input arrays, and they are not changed. 
